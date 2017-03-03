@@ -1,4 +1,4 @@
-export function routerConfig ($stateProvider, $urlRouterProvider) {
+export function routerConfig ($stateProvider, $urlRouterProvider, $locationProvider) {
   'ngInject';
   $stateProvider
     .state('home', {
@@ -7,6 +7,6 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       controller: 'MainController',
       controllerAs: 'main'
     });
-
+    $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
 }

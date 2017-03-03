@@ -44,7 +44,7 @@ export class MainController {
 		fileFormData.append('c_file', vm.scope.c_file);
 		fileFormData.append('t_text', vm.t_text);
 
-		let uploadUrl = 'http://localhost:22012/upload'
+		let uploadUrl = 'http://localhost:22012/backtest/upload'
 
 		vm.$http.post(uploadUrl, fileFormData, {
 			headers: {'Content-Type': undefined}
